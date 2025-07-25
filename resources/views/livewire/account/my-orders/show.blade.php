@@ -132,17 +132,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <livewire:account.my-orders.modal-rating :item="$item" :transaction="$transaction" />
                         </div>
                         @endforeach
-
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}"></script>
