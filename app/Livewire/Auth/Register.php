@@ -25,6 +25,19 @@ class Register extends Component
             'password' => ['required', 'confirmed'],
         ];
     }
+
+    /**
+     * mount
+     *
+     * @return void
+     */
+    public function mount()
+    {
+        // redirect if user is already logged in
+        if(auth()->guard('customer')->check()) {
+            return $this->redirect('/account/my-orders', navigate: true);
+        }
+    }
     
     /**
      * register
